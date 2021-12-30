@@ -1,0 +1,243 @@
+body{
+	background: #1E405B;	
+	font-family: 'Open Sans', sans-serif;	
+}
+h1{
+	font-weight: lighter;
+	font-size: 60px;
+	color: #fff;	
+	margin-bottom:15px;
+}
+h4{
+	font-weight: lighter;
+	font-size: 24px;
+	color: rgba(255,255,255,0.5);
+	margin-top:0px;
+	margin-bottom:30px;
+}
+.wrapper{
+	max-width: 600px;
+	margin: auto;	
+	text-align: center;
+	padding: 30px;
+}
+.logo{
+	.heart{
+	 	opacity: 1;
+		display: inline-block;
+		cursor: pointer;
+		width: 50px;
+		height: 40px;
+		padding-bottom: 10px;
+		left: auto;
+		position: relative;
+		vertical-align: middle;
+	}
+}
+.button{
+	&.heart{
+	opacity: 1;
+  display: block;
+  cursor: pointer;
+  position: relative;
+	width: 50px;
+  height: 40px;
+	left: auto;
+	padding-bottom: 10px;
+  margin: auto;		
+		&:active{
+			&:before, &:after {
+				transition: 0.3s linear background;	
+				background: #E73131;
+			}
+		}
+	}
+}
+
+.image-box{
+	background: url(https://s21.postimg.org/ibm7wbbvr/photo_1427348693976_99e4aca06bb9.jpg)no-repeat center;
+	background-size: cover;
+	border-radius: 5px 5px;
+	box-shadow: 5px 5px 10px rgba(0,0,0,0.2), -5px 0px 10px rgba(0,0,0,0.2);
+	height: 500px;
+	position: relative;
+}
+
+.box-wrapper{
+	width: 100px;	
+	bottom: 20px;
+	right:0;
+	position: absolute;	
+}
+
+.heart-box{	
+	position: relative;
+	height: 200px;
+  width: 100px;
+  margin: auto;
+  bottom: -60px;
+  right: 0;
+}
+
+//Heart
+.heart {
+	opacity: 0;
+	position: absolute;
+	left: 10%;
+	width: 50px;
+	height: 40px;			
+	display: none;
+	transition: 1.5s ease-in-out opacity;							
+	//Shape
+	&:before, &:after {
+		position: absolute;
+		content: "";
+		left: 25px;
+		top: 0;
+		width: 25px;
+		height: 40px;
+		background: #ff4040;    		
+		border-radius: 50px 50px 0 0;    
+		transform: rotate(-45deg);    
+		transform-origin: 0 100%;			
+	}	
+	&:after {
+		left: 0;			
+		transform: rotate(45deg);
+		transform-origin :100% 100%;
+	}
+
+	
+	&.one{
+		&:before, &:after{ 
+			background: orchid;		
+		}
+	}
+	
+	&.two{
+		&:before, &:after{ 
+			background: tomato;		
+		}
+	}
+	
+	&.three{
+		&:before, &:after{ 
+			background: limegreen;		
+		}
+	}
+	
+	&.four{
+		&:before, &:after{ 
+			background: gold;		
+		}
+	}
+	
+	&.five{
+		&:before, &:after{ 
+			background: skyblue;		
+		}
+	}
+	
+	&.six{
+		&:before, &:after{ 
+			background: orangered;		
+		}
+	}
+	
+	&.seven{
+		&:before, &:after{ 
+			background: coral;		
+		}
+	}
+	
+	&.eight{
+		&:before, &:after{ 
+			background: ForestGreen;		
+		}
+	}
+	
+	&.nine{
+		&:before, &:after{ 
+			background: magenta;		
+		}
+	}
+	
+	&.ten{
+		&:before, &:after{ 
+			background: deeppink;		
+		}
+	}
+	
+}
+
+//HeartUp
+@keyframes heartUp {
+  0% {
+  	bottom:0;
+		transform:scale(0);
+		opacity:0;
+	} 
+	1% {
+  	bottom:10%;
+		transform:scale(.9);
+		opacity:1;
+	} 
+	20% {  	
+		opacity:1;
+		left: 5%;
+	}	
+	40% {  	
+		opacity:1;
+		left: 15%;	
+	}
+	60% {  	
+		opacity:1;
+		right: 5%;
+	}	
+	100% {
+  	bottom:110%;
+		transform:scale(.5);
+		opacity:0;
+	}
+}
+
+//Fly
+.fly-one{		
+		animation:heartUp 4s infinite ease-in-out;
+	}
+.fly-two{		
+		animation:heartUp 5s infinite ease-in-out;
+	}
+.fly-three{		
+		animation:heartUp 6s infinite ease-in-out;
+	}
+
+//Active
+.active{
+	display: block;
+}
+
+.textBox{
+	display:flex;
+	flex-direction:column;
+	align-items:center;
+	justify-content:center;
+}
+
+.text{
+	font-family:'SimHei';
+	font-size:17px;
+	color:rgba(255,255,255,0.5);
+	&:last-child{
+		font-size:12px;
+		margin-top:15px;
+	}
+}
+
+strong{
+		color:#db5a6b;
+	}
+
+.img{
+	display:absolute;
+}
